@@ -38,6 +38,7 @@ class FontStyleViewController: UIViewController {
     }
     
     @IBAction func goCrazyMode(_ sender: Any) {
+        heightConstraintOfContainerView.constant = 0
         if isCrazyModeon{
             timer.invalidate()
             crazyModeButton.title = "Crazy Mode"
