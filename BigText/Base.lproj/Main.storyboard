@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAv-Xl-bCl">
-                                <rect key="frame" x="5" y="32" width="73" height="30"/>
+                                <rect key="frame" x="297" y="291" width="73" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FUf-gH-ml5"/>
                                     <constraint firstAttribute="width" constant="73" id="sJP-ld-ean"/>
@@ -78,9 +78,9 @@
                             <constraint firstItem="21R-dP-iqz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WQc-9F-rnq"/>
                             <constraint firstItem="bJ4-Dr-osn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZGM-zb-XgN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="21R-dP-iqz" secondAttribute="bottom" id="hdf-cc-6r4"/>
-                            <constraint firstItem="TAv-Xl-bCl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="lBq-b1-Fai"/>
                             <constraint firstAttribute="trailing" secondItem="21R-dP-iqz" secondAttribute="trailing" id="n1d-CZ-Ld1"/>
-                            <constraint firstItem="TAv-Xl-bCl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="qiI-8w-FDl"/>
+                            <constraint firstItem="TAv-Xl-bCl" firstAttribute="top" secondItem="p4A-nS-Tdb" secondAttribute="bottom" constant="229" id="oaf-dZ-GZr"/>
+                            <constraint firstAttribute="trailing" secondItem="TAv-Xl-bCl" secondAttribute="trailing" constant="5" id="ps7-wC-56g"/>
                             <constraint firstItem="p4A-nS-Tdb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="xcL-mZ-D5I"/>
                         </constraints>
                     </view>

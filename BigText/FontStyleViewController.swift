@@ -24,6 +24,18 @@ class FontStyleViewController: UIViewController {
         super.viewDidLoad()
         tableViewOfFontStyle.delegate = self
         tableViewOfFontStyle.dataSource = self
+        
+        self.becomeFirstResponder()
+    }
+    
+    override var canBecomeFirstResponder: Bool{
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEventSubtype.motionShake {
+            goCrazyMode(event)
+        }
     }
     
     @IBAction func dismissTextStyleViewContainer(_ sender: Any) {

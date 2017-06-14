@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     @IBAction func showTextStyleSelection(_ sender: Any) {
         dismissKeyboard()
         UIView.animate(withDuration: 0.2) {
-            self.heightConstraintOfContainerView.constant = 200
+            self.heightConstraintOfContainerView.constant = 250
         }
     }
     
