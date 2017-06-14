@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     }
     
     func dismissKeyboard() {
+        self.heightConstraintOfContainerView.constant = 0
+        
         if textView.isFirstResponder {
             textView.resignFirstResponder()
             DeleteTextButton.isHidden = true
@@ -57,6 +59,16 @@ class ViewController: UIViewController {
     @IBAction func deleteText(_ sender: Any) {
         self.label.text = ""
         self.textView.text = ""
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "embedSegue"{
+            let navController = segue.destination as! UINavigationController
+            let viewControllers = navController.viewControllers
+            let containerVc = viewControllers.first as! FontStyleViewController
+            containerVc.label = self.label
+            containerVc.heightConstraintOfContainerView = self.heightConstraintOfContainerView
+        }
     }
 }
 

@@ -11,6 +11,14 @@ import UIKit
 class FontStyleViewController: UIViewController {
 
     @IBOutlet weak var tableViewOfFontStyle: UITableView!
+    var heightConstraintOfContainerView: NSLayoutConstraint!
+    
+    var label: UILabel!
+    var timer = Timer()
+    var isCrazyModeon : Bool = false
+    
+    @IBOutlet weak var crazyModeButton: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +26,35 @@ class FontStyleViewController: UIViewController {
         tableViewOfFontStyle.dataSource = self
     }
     
+    @IBAction func dismissTextStyleViewContainer(_ sender: Any) {
+        heightConstraintOfContainerView.constant = 0
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destVc = segue.destination as! SpecSelectionViewController
         
+        destVc.label = label
         destVc.whatToDisplay = sender as! Int
+    }
+    
+    @IBAction func goCrazyMode(_ sender: Any) {
+        if isCrazyModeon{
+            timer.invalidate()
+            crazyModeButton.title = "Crazy Mode"
+            isCrazyModeon = false
+        }else{
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+            crazyModeButton.title = "Stop Crazy Mode"
+            isCrazyModeon = true
+        }
+        
+    }
+    
+    func updateCounting(){
+        let textColor = label.textColor
+        let backgroundColor = label.backgroundColor
+        label.textColor = backgroundColor
+        label.backgroundColor = textColor
     }
 }
 

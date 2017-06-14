@@ -23,7 +23,8 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Big Text!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="255" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yxc-Hn-tV0">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="255"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="255"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -38,7 +39,7 @@
                                     <constraint firstAttribute="height" id="Nlx-h4-Grg"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="ndq-Ay-4B8" kind="embed" id="IJd-do-WmE"/>
+                                    <segue destination="ndq-Ay-4B8" kind="embed" identifier="embedSegue" id="IJd-do-WmE"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4A-nS-Tdb">
@@ -147,8 +148,20 @@
                             <constraint firstItem="nT2-TF-G9W" firstAttribute="top" secondItem="Dpu-yd-Yd8" secondAttribute="bottom" id="mSl-CH-XAT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Text Style" id="v4g-Ac-2Qg"/>
+                    <navigationItem key="navigationItem" title="Text Style" id="v4g-Ac-2Qg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="gdZ-ZW-kKY">
+                            <connections>
+                                <action selector="dismissTextStyleViewContainer:" destination="l7V-gI-Kac" id="8z7-J0-MtL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Crazy Mode" id="zsC-fD-9EB">
+                            <connections>
+                                <action selector="goCrazyMode:" destination="l7V-gI-Kac" id="9au-CY-eVl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="crazyModeButton" destination="zsC-fD-9EB" id="BjX-U9-eVH"/>
                         <outlet property="tableViewOfFontStyle" destination="nT2-TF-G9W" id="QP5-Sg-EYk"/>
                         <segue destination="xe5-pw-sII" kind="show" identifier="showSelection" id="7aG-Eu-Q3t"/>
                     </connections>
