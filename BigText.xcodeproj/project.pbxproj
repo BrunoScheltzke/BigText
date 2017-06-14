@@ -12,6 +12,8 @@
 		84F6D8211EF19CB100C822AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F6D81F1EF19CB100C822AD /* Main.storyboard */; };
 		84F6D8231EF19CB100C822AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F6D8221EF19CB100C822AD /* Assets.xcassets */; };
 		84F6D8261EF19CB100C822AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F6D8241EF19CB100C822AD /* LaunchScreen.storyboard */; };
+		84F6D8301EF1D2C900C822AD /* FontStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6D82F1EF1D2C900C822AD /* FontStyleViewController.swift */; };
+		84F6D8321EF1DA3000C822AD /* SpecSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6D8311EF1DA3000C822AD /* SpecSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		84F6D8221EF19CB100C822AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F6D8251EF19CB100C822AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84F6D8271EF19CB100C822AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F6D82F1EF1D2C900C822AD /* FontStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStyleViewController.swift; sourceTree = "<group>"; };
+		84F6D8311EF1DA3000C822AD /* SpecSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				84F6D8221EF19CB100C822AD /* Assets.xcassets */,
 				84F6D8241EF19CB100C822AD /* LaunchScreen.storyboard */,
 				84F6D8271EF19CB100C822AD /* Info.plist */,
+				84F6D82F1EF1D2C900C822AD /* FontStyleViewController.swift */,
+				84F6D8311EF1DA3000C822AD /* SpecSelectionViewController.swift */,
 			);
 			path = BigText;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F6D8321EF1DA3000C822AD /* SpecSelectionViewController.swift in Sources */,
 				84F6D81E1EF19CB100C822AD /* ViewController.swift in Sources */,
+				84F6D8301EF1D2C900C822AD /* FontStyleViewController.swift in Sources */,
 				84F6D81C1EF19CB100C822AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
