@@ -39,7 +39,15 @@ class FontStyleViewController: UIViewController {
     }
     
     @IBAction func dismissTextStyleViewContainer(_ sender: Any) {
-        heightConstraintOfContainerView.constant = 0
+        dismissFontStyleSelection()
+    }
+    
+    func dismissFontStyleSelection() {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.4) {
+            self.heightConstraintOfContainerView.constant = 0
+            self.view.layoutIfNeeded()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

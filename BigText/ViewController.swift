@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     func dismissKeyboard() {
-        self.heightConstraintOfContainerView.constant = 0
+        dismissFontStyleSelection()
         
         if textView.isFirstResponder {
             textView.resignFirstResponder()
@@ -44,15 +44,25 @@ class ViewController: UIViewController {
     }
     
     func keyboardWillShow(notification:NSNotification) {
-        self.heightConstraintOfContainerView.constant = 0
+        dismissFontStyleSelection()
         DeleteTextButton.isHidden = false
         TextStyleButton.isHidden = false
     }
     
+    func dismissFontStyleSelection() {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.4) {
+            self.heightConstraintOfContainerView.constant = 0
+            self.view.layoutIfNeeded()
+        }
+    }
+    
     @IBAction func showTextStyleSelection(_ sender: Any) {
         dismissKeyboard()
-        UIView.animate(withDuration: 0.2) {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.4) {
             self.heightConstraintOfContainerView.constant = 250
+            self.view.layoutIfNeeded()
         }
     }
     
