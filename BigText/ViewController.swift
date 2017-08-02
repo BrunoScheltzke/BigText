@@ -7,18 +7,31 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
     @IBOutlet weak var heightConstraintOfContainerView: NSLayoutConstraint!
     @IBOutlet weak var TextStyleButton: UIButton!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var bannerViewHolder: UIView!
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var DeleteTextButton: UIButton!
     @IBOutlet weak var textView: UITextView!
     
+    var bannerView : GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeFullBanner)
+        bannerViewHolder.addSubview(bannerView)
+        bannerView.adUnitID = "ca-app-pub-7119458267348140/4520451092"
+        bannerView.rootViewController = self
+        let request = GADRequest()
+        request.testDevices = [ kGADSimulatorID ]
+        bannerView.load(request)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
         textView.delegate = self
